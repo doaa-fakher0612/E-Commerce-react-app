@@ -1,5 +1,5 @@
 import React from "react";
-
+import Cart from "./Cart"
 export default function Nav(){
     return(
         <>
@@ -14,9 +14,8 @@ export default function Nav(){
                 <li>
                     <a href= "#" className="contact break-words text-xs transition-colors hover:text-secondaryLight md:text-base" >Contact</a>
                 </li>
-            </ul>
-
-          
+            </ul>       
+            <Cart/>   
         </nav>
         </>
     )

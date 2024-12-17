@@ -2,6 +2,7 @@ import React from "react";
 import Cart from "./Cart";
 import NavList from "./NavList";
 import { IoIosMenu } from "react-icons/io";
+
 export default function Navbar() {
   return (
     <>

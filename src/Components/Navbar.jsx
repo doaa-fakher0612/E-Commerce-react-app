@@ -14,8 +14,7 @@ export default function Navbar() {
           <IoIosMenu />
           <div
             id="nav-menu-content"
-            class="absolute -left-14 top-4 hidden w-20 bg-white rounded p-2 shadow-lg shadow-gray-700"
-          >
+            className="absolute -left-14 top-4 hidden w-20 bg-white rounded p-2 shadow-lg shadow-gray-700">
             <NavList/>
           </div>
         </div>

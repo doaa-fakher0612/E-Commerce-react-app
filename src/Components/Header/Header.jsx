@@ -6,7 +6,7 @@ export default function Header({ sharedCounter, setSharedCounter }) {
   return (
     <header
       id="header"
-      className="fixed top-0 z-50 flex h-10 w-full items-center justify-between gap-1 bg-red-200 px-3 py-6 md:h-20 md:px-8"
+      className="fixed top-0 z-50 flex h-10 w-full items-center justify-between gap-1 bg-white px-3 py-6 md:h-20 md:px-8 shadow-xl"
     >
       <Logo />
       <Navbar

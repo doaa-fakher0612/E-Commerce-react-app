@@ -1,14 +1,25 @@
-import Header  from './Components/Header'
-import MainContent from './Components/MainContent'
-import "./index.css"
-import './App.css'
+import React from "react";
+import Header from "./Components/Header";
+import "./index.css";
+import "./App.css";
+import MainContent from "./Components/MainContent";
 
-export default function App(){
+
+export default function App() {
+  let [sharedCounter, setSharedCounter] = React.useState(0);
   return (
-   <div id ="main-wrapper" className='m-3'>
-    <Header/>
-    <MainContent/>
-   </div>
-  )
-}
+    <div>
+      <Header
+        sharedCounter={sharedCounter}
+        setSharedCounter={setSharedCounter}
+      ></Header>
 
+      <div className="h-24"></div>
+
+      <MainContent
+        sharedCounter={sharedCounter}
+        setSharedCounter={setSharedCounter}
+      ></MainContent>
+    </div>
+  );
+}

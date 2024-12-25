@@ -1,12 +1,11 @@
 import React from "react";
-import CartCounter from "./cartCounter";
+import CartCounter from "./CartCounter";
 import CartMenu from "./CartMenu";
 import MainContent from "./MainContent";
 
 import { FaCartShopping } from "react-icons/fa6";
 
-
-export default function Cart({sharedCounter , setSharedCounter}) {
+export default function Cart({ sharedCounter, setSharedCounter }) {
   let [showCartMenu, setShowCartMenu] = React.useState(false);
 
   console.log("Cart Props: ", { sharedCounter, setSharedCounter });
@@ -23,11 +22,11 @@ export default function Cart({sharedCounter , setSharedCounter}) {
       >
         <FaCartShopping className="cart m-5 md:text-2xl" />
 
-         <CartCounter
-                sharedCounter={sharedCounter}
-                setSharedCounter={setSharedCounter}
-              ></CartCounter>
-              
+        <CartCounter
+          sharedCounter={sharedCounter}
+          setSharedCounter={setSharedCounter}
+        ></CartCounter>
+
         {showCartMenu && <CartMenu />}
       </div>
     </>

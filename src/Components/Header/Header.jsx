@@ -13,7 +13,6 @@ export default function Header({ sharedCounter, setSharedCounter }) {
         sharedCounter={sharedCounter}
         setSharedCounter={setSharedCounter}
       ></Navbar>
-      
     </header>
   );
 }

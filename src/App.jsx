@@ -1,9 +1,8 @@
 import React from "react";
-import Header from "./Components/Header";
+import Header from "./Components/Header/Header";
 import "./index.css";
 import "./App.css";
-import MainContent from "./Components/MainContent";
-
+import MainContent from "./Components/Header/MainContent";
 
 export default function App() {
   let [sharedCounter, setSharedCounter] = React.useState(0);

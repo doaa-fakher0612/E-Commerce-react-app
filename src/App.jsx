@@ -3,6 +3,7 @@ import Header from "./Components/Header/Header";
 import "./index.css";
 import "./App.css";
 import MainContent from "./Components/Header/MainContent";
+import Carousel from "./Components/Carousel/carousel";
 
 export default function App() {
   let [sharedCounter, setSharedCounter] = React.useState(0);
@@ -19,6 +20,8 @@ export default function App() {
         sharedCounter={sharedCounter}
         setSharedCounter={setSharedCounter}
       ></MainContent>
+
+      <Carousel></Carousel>
     </div>
   );
 }

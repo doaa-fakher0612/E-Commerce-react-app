@@ -8,7 +8,7 @@ export default function MainContent({sharedCounter ,setSharedCounter}){
   
 // return  
 return(
-    <button onClick={handleAdd} className="bg-blue-300 p-2 rounded">Click Me</button>
+    <button onClick={handleAdd} className="bg-blue-300 p-2 rounded">Click Me to increase cart counter</button>
 )
 
 }

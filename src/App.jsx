@@ -50,16 +50,16 @@ export default function App() {
 
       <div className="h-24"></div>
 
-      <MainContent
+      {/* <MainContent
         sharedCounter={sharedCounter}
         setSharedCounter={setSharedCounter}
-      ></MainContent>
+      ></MainContent> */}
 
       <Carousel></Carousel>
 
     <div className="flex flex-col gap-4 p-3">
       <CategoriesList categoriesList = {categoriesList}/>
-      <ProductCard    categoryProducts = {categoryProducts}/>
+      <ProductCard    categoryProducts = {categoryProducts} counter = {sharedCounter} setCounter = {setSharedCounter}/>
     </div>
 
      

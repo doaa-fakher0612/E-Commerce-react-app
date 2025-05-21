@@ -12,7 +12,7 @@ import { data } from "autoprefixer";
 export default function App() {
   let [sharedCounter, setSharedCounter] = useState(0);
    const [categoriesList, setCategoriesList] = useState([])
-   
+   const [categoryProducts, setCategoryProducts] = useState([])
 
   // fetch categories list
     useEffect (()=> {
@@ -30,7 +30,7 @@ export default function App() {
        fetch(`https://fakestoreapi.com/products/category/${categoryName}`)
         .then((response) => response.json())
         .then((data) =>
-          console.log(`Products in category "${categoryName}":`, data)
+          setCategoryProducts(data)
         )
         .catch((error) =>
           console.error(`Error fetching products for ${categoryName}:`, error)
@@ -58,8 +58,8 @@ export default function App() {
       <Carousel></Carousel>
 
     <div className="flex flex-col gap-4 p-3">
-      <CategoriesList  categoriesList = {categoriesList}/>
-      <ProductCard />
+      <CategoriesList categoriesList = {categoriesList}/>
+      <ProductCard    categoryProducts = {categoryProducts}/>
     </div>
 
      

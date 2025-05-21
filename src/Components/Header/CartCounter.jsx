@@ -2,7 +2,7 @@ import React from "react";
 
 
 export default function CartCounter({sharedCounter}){
-  console.log("CartCounter Props: ", { sharedCounter });
+  // console.log("CartCounter Props: ", { sharedCounter });
 
     return(
         <>

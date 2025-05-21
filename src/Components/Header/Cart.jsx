@@ -1,9 +1,8 @@
 import React from "react";
 import CartCounter from "./CartCounter";
 import CartMenu from "./CartMenu";
-import MainContent from "./MainContent";
-
 import { FaCartShopping } from "react-icons/fa6";
+
 
 export default function Cart({ sharedCounter, setSharedCounter }) {
   let [showCartMenu, setShowCartMenu] = React.useState(false);

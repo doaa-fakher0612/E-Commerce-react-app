@@ -8,10 +8,10 @@ export default function CategoriesList(props){
                 props.categoriesList.map((category)=>{
                    
                     return(
-                        <div className="break-words p-3 bg-neutral-200 rounded hover:text-orange-500 transition duration-300 cursor-pointer">
+                        <button className="break-words p-3 bg-neutral-200 rounded hover:text-orange-500 transition duration-300 cursor-pointer"
+                        onClick={()=>props.setSelectedCategory(category)}>
                             {category.charAt(0).toUpperCase() + category.slice(1).toLowerCase()}
-                       
-                        </div>
+                        </button>
                     )
                 })
             }

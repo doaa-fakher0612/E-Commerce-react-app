@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
 
-export default function Header({ sharedCounter, setSharedCounter }) {
+export default function Header({ sharedCounter, setSharedCounter ,props}) {
   return (
     <header
       id="header"

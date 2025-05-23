@@ -1,14 +1,12 @@
-import { useState, useEffect, useRef } from "react";
-import Header from "./Components/Header/Header";
+
 import "./index.css";
 import "./App.css";
+import { useState, useEffect, useRef } from "react";
+import Header from "./Components/Header/Header";
 import useLocalStorage from "./Hooks/useLocalStorage";
-import MainContent from "./Components/Header/MainContent";
 import Carousel from "./Components/Carousel/carousel";
-import X from "./Components/X";
 import CategoriesList from "./Components/Categories Content/CategoriesList";
 import ProductCard from "./Components/Products/ProductCard";
-import { data } from "autoprefixer";
 import Footer from "./Components/Footer/Footer";
 
 

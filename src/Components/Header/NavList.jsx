@@ -16,7 +16,7 @@ export default function NavList() {
         </li>
         <li>
           <Link
-            to="/About"
+            to="/AboutPage"
             className="about break-words text-xs transition-colors hover:text-secondaryLight md:text-base"
           >
             About

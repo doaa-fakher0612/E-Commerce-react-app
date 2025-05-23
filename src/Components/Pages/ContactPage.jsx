@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-export default function ContactPage() {
+export default function ContactPage({cart,setCart}) {
   return (
 
    
@@ -9,7 +9,11 @@ export default function ContactPage() {
       id="main-container"
       className=" mx-auto flex min-h-screen w-full flex-col gap-2"
     >
-       <Header />
+            <Header
+              
+              cart={cart}
+              setCart={setCart}
+            ></Header>
 
        <div
        id="main-content"

@@ -4,7 +4,7 @@ import "./App.css";
 import { useState, useEffect, useRef } from "react";
 import Header from "./Components/Header/Header";
 import useLocalStorage from "./Hooks/useLocalStorage";
-import Carousel from "./Components/Carousel/carousel";
+import Carousel from "./Components/Carousel/Carousel";
 import CategoriesList from "./Components/Categories Content/CategoriesList";
 import ProductCard from "./Components/Products/ProductCard";
 import Footer from "./Components/Footer/Footer";
@@ -44,10 +44,6 @@ export default function HomePage() {
   }, [selectedCategory]);
 
   return (
-    
-
-
-
     <div>
       <Header
         sharedCounter={sharedCounter}
@@ -58,10 +54,6 @@ export default function HomePage() {
 
       <div className="h-24"></div>
 
-      {/* <MainContent
-        sharedCounter={sharedCounter}
-        setSharedCounter={setSharedCounter}
-      ></MainContent> */}
 
       <Carousel></Carousel>
 

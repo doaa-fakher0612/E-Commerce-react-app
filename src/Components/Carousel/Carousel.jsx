@@ -37,19 +37,19 @@ export default function Carousel() {
   return (
     <>
      <div id="carousel" class="relative h-96 w-full bg-red-300">
-            <div class="prev absolute flex h-full w-20 items-center justify-center hover:text-primaryLight">
-                <button class="group flex size-10 items-center justify-center rounded-full bg-gray-300" onClick={handelClickPrev}>
-                    <FaArrowLeft  class ="text-blue-950 group-hover:text-primaryLight" />
+            <div className="prev absolute flex h-full w-20 items-center justify-center hover:text-primaryLight">
+                <button className="group flex size-10 items-center justify-center rounded-full bg-gray-300" onClick={handelClickPrev}>
+                    <FaArrowLeft  className ="text-blue-950 group-hover:text-primaryLight" />
                 </button>
             </div>
 
-            <div class="h-full w-full">
+            <div className="h-full w-full">
                 <img id="carousel_image" src={carouselImgs[currentCarouselImgIndex]} class="h-full w-full object-cover"/>
             </div>
 
-            <div class="next absolute right-0 top-0 z-30 flex h-full w-20 items-center justify-center">
-                <button class="group flex size-10 items-center justify-center rounded-full bg-gray-300" onClick={handelClickNext}>
-                <FaArrowRight  class ="text-blue-950 group-hover:text-primaryLight" />
+            <div className="next absolute right-0 top-0 z-30 flex h-full w-20 items-center justify-center">
+                <button className="group flex size-10 items-center justify-center rounded-full bg-gray-300" onClick={handelClickNext}>
+                <FaArrowRight  className ="text-blue-950 group-hover:text-primaryLight" />
                 </button>
             </div>
         </div>

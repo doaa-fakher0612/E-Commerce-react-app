@@ -1,13 +1,17 @@
 import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-export default function AboutPage() {
+export default function AboutPage({cart, setCart}) {
   return (
     <div
       id="main-container"
       className=" mx-auto flex min-h-screen w-full flex-col gap-2"
     >
-      <Header />
+           <Header
+          
+             cart={cart}
+             setCart={setCart}
+           ></Header>
 
       <div className=" flex w-full min-h-screen flex-row items-center justify-between bg-white p-3">
         <div className="text">

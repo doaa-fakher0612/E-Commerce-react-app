@@ -5,11 +5,11 @@ export default function ProductsContainer(props) {
 
 
   function handelAddToCart(item) {
-    console.log("add to cart clicked");
-    console.log(item);
+    // console.log("add to cart clicked");
+    // console.log(item);
     const updatedCart = [...props.cart, item];
     props.setCart(updatedCart);
-    console.log("updatedCart:", updatedCart);
+    // console.log("updatedCart:", updatedCart);
     props.setSharedCounter(props.sharedCounter + 1)
   }
 
@@ -21,6 +21,7 @@ export default function ProductsContainer(props) {
       {props.categoryProducts.map((product) => {
         return (
           <div
+          key={product.id}
             id="productCard"
             className="bg-white flex gap-4 flex-col 
              rounded p-2 items-start shadow-lg break-words justify-between"

@@ -3,7 +3,7 @@ import Cart from "./Cart";
 import NavList from "./NavList";
 import { IoIosMenu } from "react-icons/io";
 
-export default function Navbar({ sharedCounter, setSharedCounter }) {
+export default function Navbar({ sharedCounter, setSharedCounter, cart, setCart }) {
   return (
     <>
       <nav className="flex items-center gap-4 text-base md:text-lg">
@@ -11,6 +11,8 @@ export default function Navbar({ sharedCounter, setSharedCounter }) {
         <Cart
           sharedCounter={sharedCounter}
           setSharedCounter={setSharedCounter}
+          cart = {cart}
+        setCart = {setCart}
         ></Cart>
 
         <div id="nav-menu" className="nav-menu flex md:hidden relative ">

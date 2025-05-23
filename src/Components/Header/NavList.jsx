@@ -9,7 +9,8 @@ export default function NavList() {
         <li>
           <Link
             to="/"
-            className="home break-words text-xs transition-colors md:text-base md:text-secondaryLight"
+            id = "home"
+            className=" break-words text-xs transition-colors md:text-base md:text-secondaryLight"
           >
             Home
           </Link>
@@ -17,7 +18,8 @@ export default function NavList() {
         <li>
           <Link
             to="/AboutPage"
-            className="about break-words text-xs transition-colors hover:text-secondaryLight md:text-base"
+            id = "about"
+            className=" break-words text-xs transition-colors hover:text-secondaryLight md:text-base"
           >
             About
           </Link>
@@ -26,7 +28,8 @@ export default function NavList() {
         <li>
           <Link
             to="/ContactPage"
-            className="contact break-words text-xs transition-colors hover:text-secondaryLight md:text-base"
+            id = "contact"
+            className=" break-words text-xs transition-colors hover:text-secondaryLight md:text-base"
           >
             Contact
           </Link>

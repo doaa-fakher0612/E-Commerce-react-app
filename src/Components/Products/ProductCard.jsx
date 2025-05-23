@@ -10,7 +10,7 @@ export default function ProductsContainer(props) {
     const updatedCart = [...props.cart, item];
     props.setCart(updatedCart);
     console.log("updatedCart:", updatedCart);
-    props.setCounter(props.counter + 1);
+    props.setSharedCounter(props.sharedCounter + 1)
   }
 
   return (

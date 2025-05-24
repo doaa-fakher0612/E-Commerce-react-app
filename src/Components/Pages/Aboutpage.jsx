@@ -8,7 +8,6 @@ export default function AboutPage({cart, setCart}) {
       className=" mx-auto flex min-h-screen w-full flex-col gap-2"
     >
            <Header
-          
              cart={cart}
              setCart={setCart}
            ></Header>

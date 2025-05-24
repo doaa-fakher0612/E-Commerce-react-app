@@ -2,17 +2,11 @@ import React from "react";
 import CartMenu from "./CartMenu";
 import { FaCartShopping } from "react-icons/fa6";
 
-export default function Cart({
-  sharedCounter,
-  setSharedCounter,
-  cart,
-  setCart,
-}) {
+export default function Cart({cart,setCart}) {
   let [showCartMenu, setShowCartMenu] = React.useState(false);
 
 
-  // console.log("Cart Props: ", { sharedCounter, setSharedCounter });
-
+ 
   // initial set for set cart counter
 
   return (

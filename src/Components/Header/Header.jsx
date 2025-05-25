@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "./Logo";
 import Navbar from "./Navbar";
 
-export default function Header({ sharedCounter, setSharedCounter ,cart, setCart}) {
+export default function Header({ cart, setCart}) {
   return (
     <header
       id="header"
@@ -10,8 +10,7 @@ export default function Header({ sharedCounter, setSharedCounter ,cart, setCart}
     >
       <Logo />
       <Navbar
-        sharedCounter={sharedCounter}
-        setSharedCounter={setSharedCounter}
+        
         cart = {cart}
         setCart = {setCart}
       ></Navbar>

@@ -1,27 +1,21 @@
-import React, { useEffect } from "react";
-
-
-export default function ProductsContainer(props) {
-
-
-  function handelAddToCart(item) {
+export default function ProductsContainer({ categoryProducts, cart, setCart }) {
+  function handleAddToCart(item) {
     // console.log("add to cart clicked");
     // console.log(item);
-    const updatedCart = [...props.cart, item];
-    props.setCart(updatedCart);
+    const updatedCart = [...cart, item];
+    setCart(updatedCart);
     // console.log("updatedCart:", updatedCart);
-    props.setSharedCounter(props.sharedCounter + 1)
   }
 
   return (
     <div
       id="products-container"
-      class="grid-col-1 grid gap-5 bg-white px-4 py-2 md:grid-cols-4"
+      className="grid-col-1 grid gap-5 bg-white px-4 py-2 md:grid-cols-4"
     >
-      {props.categoryProducts.map((product) => {
+      {categoryProducts.map((product) => {
         return (
           <div
-          key={product.id}
+            key={product.id}
             id="productCard"
             className="bg-white flex gap-4 flex-col 
              rounded p-2 items-start shadow-lg break-words justify-between"
@@ -60,7 +54,7 @@ export default function ProductsContainer(props) {
               <hr id="footerSeparator" className="w-full h-1 text-gray-900" />
               <button
                 className="w-full h-fit bg-cyan-600 text-white rounded-xl text-center md:text-lg text-sm p-2 hover:bg-cyan-900 active:bg-cyan-900"
-                onClick={() => handelAddToCart(product)}
+                onClick={() => handleAddToCart(product)}
               >
                 Add to Cart
               </button>

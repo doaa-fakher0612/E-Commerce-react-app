@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from "react";
-import "./index.css";
+import { useState } from "react";
 import "./App.css";
 import HomePage from "./HomePage";
 import { Routes, Route } from "react-router-dom";
@@ -7,37 +6,42 @@ import ContactPage from "./Components/Pages/ContactPage";
 import AboutPage from "./Components/Pages/Aboutpage";
 import useLocalStorage from "./Hooks/useLocalStorage";
 export default function App() {
+
   const [categoriesList, setCategoriesList] = useState([]);
   const [categoryProducts, setCategoryProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [cart, setCart] = useLocalStorage("Product", []);
+  
+
+const categoryState = {
+  categoriesList,
+  setCategoriesList,
+  categoryProducts,
+  setCategoryProducts,
+  selectedCategory,
+  setSelectedCategory,
+};
+
+const cartState = { cart, setCart  };
   return (
-    <div className="App">
+    
+    <>
       <Routes>
         <Route
           path="/"
           element={
-            <HomePage
-              categoriesList={categoriesList}
-              setCategoriesList={setCategoriesList}
-              categoryProducts={categoryProducts}
-              setCategoryProducts={setCategoryProducts}
-              selectedCategory={selectedCategory}
-              setSelectedCategory={setSelectedCategory}
-              cart={cart}
-              setCart={setCart}
-            />
+            <HomePage  categoryState={categoryState} cartState={cartState} />
           }
         />
         <Route
-          path="ContactPage"
-          element={<ContactPage cart={cart} setCart={setCart} />}
+          path="/contact-page"
+          element={<ContactPage cartState={cartState} />}
         />
         <Route
-          path="AboutPage"
-          element={<AboutPage cart={cart} setCart={setCart} />}
+          path="/about-page"
+          element={<AboutPage  cartState={cartState}/>}
         />
       </Routes>
-    </div>
+    </>
   );
 }

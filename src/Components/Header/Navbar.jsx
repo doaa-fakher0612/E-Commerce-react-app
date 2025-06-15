@@ -3,15 +3,12 @@ import Cart from "./Cart";
 import NavList from "./NavList";
 import { IoIosMenu } from "react-icons/io";
 
-export default function Navbar({  cart, setCart }) {
+export default function Navbar({ cart, setCart }) {
   return (
     <>
       <nav className="flex items-center gap-4 text-base md:text-lg">
         <NavList />
-        <Cart
-          cart = {cart}
-        setCart = {setCart}
-        ></Cart>
+        <Cart cart={cart} setCart={setCart}></Cart>
 
         <div id="nav-menu" className="nav-menu flex md:hidden relative ">
           <IoIosMenu />

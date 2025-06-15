@@ -1,21 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-export default function ContactPage({cart,setCart}) {
-  return (
+export default function ContactPage({ cartState}) {
 
-   
+   const { cart, setCart } = cartState;
+
+ 
+
+  return (
     <div
       id="main-container"
       className=" mx-auto flex min-h-screen w-full flex-col gap-2"
     >
-            <Header
-              
-              cart={cart}
-              setCart={setCart}
-            ></Header>
+         <Header cart={cart} setCart={setCart}></Header>
 
-       <div
+      <div
        id="main-content"
         className="flex flex-grow flex-col items-center justify-start gap-4 p-4"
       >
@@ -71,6 +70,6 @@ export default function ContactPage({cart,setCart}) {
      </div>
 
       <Footer />
-   </div>
+    </div>
   );
 }

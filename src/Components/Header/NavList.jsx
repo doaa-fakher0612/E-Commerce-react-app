@@ -3,37 +3,27 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function NavList() {
   const location = useLocation();
-  console.log(location);
-
-  const [selected, setSelected] = useState(location.pathname);
-
-  useEffect(() => {
-    setSelected(location.pathname);
-  }, [location.pathname]);
 
   const links = [
     { path: "/", label: "Home", id: "home" },
-    { path: "/AboutPage", label: "About", id: "about" },
-    { path: "/ContactPage", label: "Contact", id: "contact" },
+    { path: "/about-page", label: "About", id: "about" },
+    { path: "/contact-page", label: "Contact", id: "contact" },
   ];
 
   return (
     <ul className="list hidden items-center justify-between gap-3 md:flex">
       {links.map((link) => {
-        const isSelected = selected === link.path;
+        const isSelected = location.pathname === link.path;
 
-        console.log("selected : " + selected + "   isSelected:  " + isSelected);
-        console.log("current path:", location.pathname);
-        console.log("selected state:", selected);
-        console.log("link.path:", link.path);
-        console.log("__________________________________________")
+ 
+       
         return (
           <li key={link.id}>
             <Link
               to={link.path}
               id={link.id}
               className={`break-words text-xs transition-colors md:text-base hover:text-secondaryLight
-                 ${isSelected ? "md:text-secondaryLight" : "md:text-base" }`}
+                 ${isSelected ? "bg-orange-100 text-orange-500 font-semibold rounded px-2 py-1" : "text-black"}`}
             >
               {link.label}
             </Link>

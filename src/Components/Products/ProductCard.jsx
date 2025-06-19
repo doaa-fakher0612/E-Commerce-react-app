@@ -1,10 +1,8 @@
-export default function ProductsContainer({ categoryProducts, cart, setCart }) {
+export default function ProductsCard({ categoryProducts, cart, setCart }) {
+
   function handleAddToCart(item) {
-    // console.log("add to cart clicked");
-    // console.log(item);
     const updatedCart = [...cart, item];
     setCart(updatedCart);
-    // console.log("updatedCart:", updatedCart);
   }
 
   return (

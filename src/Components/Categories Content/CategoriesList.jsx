@@ -2,9 +2,9 @@ import {  useCallback } from "react";
 
 export default function CategoriesList({
   categoriesList,
-
   selectedCategory,
   setSelectedCategory,
+    
 })
 
 
@@ -21,6 +21,7 @@ const handleCategoryClick = useCallback(
       id="categoriesList"
       className={`grid grid-cols-2 items-center justify-between gap-4 text-center md:grid-cols-4`}
     >
+      
       {categoriesList.map((category) => {
         const isSelected = selectedCategory === category;
         {

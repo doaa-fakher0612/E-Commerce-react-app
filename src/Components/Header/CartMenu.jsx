@@ -3,11 +3,10 @@ import React from "react";
 export default function CartMenu({ cart, setCart }) {
   function handelRemoveItem(cartId) {
     const indexToRemove = cart.findIndex((product) => product.id === cartId);
-    // const updatedCart = [...cart]; // copy the original cart
-    // updatedCart.splice(indexToRemove, 1); // remove one item at the found index
-    // setCart(updatedCart);
-   const updatedCart =  cart.filter(product => product.id !== cartId);
-   setCart(updatedCart);
+    const updatedCart = [...cart]; // copy the original cart
+    updatedCart.splice(indexToRemove, 1); // remove one item at the found index
+    setCart(updatedCart);
+
   }
 
   return (

@@ -1,8 +1,12 @@
 import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import img from "../../assets/eCommerceLogo.jpg";
+
+console.log(img);
 export default function AboutPage({cartState}) {
     const { cart, setCart } = cartState;
+    
   return (
     <div
       id="main-container"
@@ -25,7 +29,7 @@ export default function AboutPage({cartState}) {
         <div className="flex flex-grow items-center justify-center h-full">
           <img
             className="h-full w-full md:object-contain"
-            src="src\assets\eCommerce-logo.jpg"
+            src={img}
           />
         </div>
       </div>
